@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HOME</title>
+    <!-- <link rel ="stylesheet" href="CropDoctor_v1_Main\static\s11.css"> -->
+ 
+</head>
+<body>
+    <style>
+        * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background-image: linear-gradient(rgb(101, 240, 170), rgb(249, 249, 246));
+    
+  }
+  
+  .header {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(179, 246, 234, 0.993);
+  }
+  
+  .header h1 {
+    font-size: 75px;
+    color:#505051;
+    text-align:right;
+  }
+  
+  .header h2 {
+    font-size: 75px;
+    color:#6c6b6b;
+    text-align:right;
+  }
+  
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(248, 248, 249);
+  }
+  
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #656665;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+ 
+  .topnav a:hover {
+    background-color: rgb(239, 8, 8);
+    color: rgb(238, 176, 203);
+  }
+  .column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 40%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 60%;
+  color:grey;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+.row1 {
+  display: flex;
+}
+
+
+.column1 {
+  flex: 33.33%;
+  padding: 5px;
+}
+.nicek
+{
+  color:#656665;
+  text-align: center;
+}
+
+
+    </style>
+  <!-- NAVIGATION BAR  -->
+
+  <div class="topnav">
+    <a href="home">Home</a>
+    <a href="detect">Detect</a>
+    
+    <a href="about">About Me</a>
+    <a href="logout" style="float:right">Log Out</a>
+</div>
+
+
+    <!-- HEADER -->
+
+    <div class="header">
+        <!-- <img src="{{ url_for('static', filename='new 5.jpg') }}" alt="hi">  -->
+        <h1>Hi</h1>
+       {% for task_id in tasks %} 
+            <h2>{{tasks[task_id]}}</h2>
+        {% endfor %}
+    </div> 
+    
+
+    <div class="row1">
+        <div class="column1">
+          <img src="{{ url_for('static', filename='hunter-so-pK1aczmelMQ-unsplash.jpg') }}" style="width:100%" alt="hi">
+        </div>
+        
+        <div class="column1">
+          <h2>MY CROPDOCTOR</h2>
+          <p>Agriculture provides food to all the human beings </p>
+          <p>in case of rapid increase in the population.</p>
+          <p>It is recommended to predict the plant diseases at their early stage.</p>
+          
+        </div>
+        <div class="column1">
+         
+         <img src="{{ url_for('static', filename='rodion-kutsaiev-049M_crau5k-unsplash.jpg') }}" style="width:100%" alt="hi">
+        </div> 
+      </div> 
+      <br>
+      <br>
+      <div class="nicek">
+     <h2>Upload your plantleaf Image in the detect page</h2>
+      </div>
+     <br>
+     <br>
+      <div class="row1">
+        <div class="column1">
+          <img src="{{ url_for('static', filename='new1.jpg') }}" alt="hi" style="width:100%" > 
+        </div>
+        <div class="column1">
+          <img src="{{ url_for('static', filename='new4.jpg') }}" alt="hi" style="width:100%"> 
+        </div>
+        <div class="column1">
+          <img src="{{ url_for('static', filename='new3.jpg') }}" alt="hi" style="width:100%" > 
+        </div>
+      </div>
+
+
+
+</body>
+</html> 

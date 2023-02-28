@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARVIND'S</title>
+</head>
+
+<body>
+  <!-- INTERNAL CSS -->
+  <style>
+  *{
+      background-color:rgb(236, 248, 249);
+    }
+
+  a:link, a:visited 
+  {
+    background-color: #94f74e;
+    color: rgb(159, 249, 124);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a:hover, a:active 
+  {
+    background-color: rgb(238, 163, 14);
+  }
+  h1
+  {
+    padding: auto;
+    color: rgb(145, 246, 13);
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .p123
+  {
+    text-align: center;
+    padding: auto;
+  }
+  .row 
+  {
+    display: flex;
+  }
+  
+  .column 
+  {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+  </style> 
+ 
+    <h1>CROPDOCTOR</h1>
+    <h1>A PLANTLEAF DISEASE DETECTOR</h1> 
+    <br>
+    <br>
+
+
+  <div class="p123">
+    <ul>
+        <li style="display:inline-block;"> 
+          <!-- THIS REFERS TO LOGIN FUNCTION IN AUTH.PY -->
+          <a href="login" style="text-decoration:none; color:#74ee8a;"><h1>Login</h1></a>
+        </li>
+        <li style="display:inline-block;">
+             <!-- THIS REFERS TO REGISTER FUNCTION IN AUTH.PY -->
+            <a href="register" style="text-decoration:none; color:#8ff977;"><h1>Register</h1></a>
+        </li>
+    </ul>
+  </div>
+    <br>
+    <br>
+    <br>
+    
+    <div class="row">
+      <div class="column">
+        <img src="{{ url_for('static', filename='background.jpg') }}" alt="hi" style="width:100%" > 
+      </div>
+      <div class="column">
+        <img src="{{ url_for('static', filename='img_forest.jpg') }}" alt="hi" style="width:100%" > 
+      </div>
+      <div class="column">
+        <img src="{{ url_for('static', filename='img_mountains.jpg') }}" alt="hi"style="width:100%" > 
+      </div>
+    </div>
+    
+</body>
+</html>
